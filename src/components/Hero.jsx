@@ -101,8 +101,8 @@ const Hero = () => {
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
+        className="hero-stats-row"
         style={{
-          display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center',
           y: yBadge, opacity: opacityFade
         }}
       >
@@ -111,11 +111,12 @@ const Hero = () => {
             key={stat.label}
             whileHover={{ y: -4, scale: 1.03 }}
             transition={{ duration: 0.2 }}
-            className="glass-card"
+            className="glass-card stat-card"
             style={{
               padding: '1.2rem 2rem',
               display: 'flex', alignItems: 'center', gap: '1rem',
               borderRadius: 'var(--radius-xl)',
+              minWidth: '240px'
             }}
           >
             <div style={{

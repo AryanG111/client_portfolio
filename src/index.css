@@ -529,16 +529,17 @@ body {
 }
 
 @media (max-width: 992px) {
-
   .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .section {
     padding: 5rem 2rem;
   }
 
+  /* Main navbar disappears, so we'll handle mobile menu below */
   .navbar {
     display: none;
   }
@@ -547,19 +548,73 @@ body {
 @media (max-width: 768px) {
   .grid-4 {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .section {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1.2rem;
   }
 
   .title-large {
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
     letter-spacing: -1.5px;
+    line-height: 1.1;
   }
 
   .title-section {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+    letter-spacing: -1px;
+  }
+
+  .container {
+    padding: 0 1.2rem;
+  }
+}
+
+/* ================================
+   MOBILE NAVIGATION
+ ================================ */
+.mobile-nav-trigger {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  z-index: 1001;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-color);
+  box-shadow: 0 8px 25px rgba(253, 224, 71, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 15, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem;
+  gap: 1.5rem;
+}
+
+.mobile-nav-link {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 992px) {
+  .mobile-nav-trigger {
+    display: flex;
   }
 }
 
@@ -567,6 +622,28 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.hero-stats-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .hero-stats-row {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /* ================================
