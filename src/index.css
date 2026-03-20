@@ -134,11 +134,25 @@ body {
 /* ================================
    COLORS
 ================================ */
-.text-yellow { color: var(--accent-yellow); }
-.text-pink { color: var(--accent-pink); }
-.text-purple { color: var(--accent-purple); }
-.text-white { color: var(--text-primary); }
-.text-muted { color: var(--text-secondary); }
+.text-yellow {
+  color: var(--accent-yellow);
+}
+
+.text-pink {
+  color: var(--accent-pink);
+}
+
+.text-purple {
+  color: var(--accent-purple);
+}
+
+.text-white {
+  color: var(--text-primary);
+}
+
+.text-muted {
+  color: var(--text-secondary);
+}
 
 .gradient-text {
   background: var(--accent-gradient);
@@ -364,34 +378,75 @@ body {
    COUNTER ANIMATION
 ================================ */
 @keyframes countUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(253, 224, 71, 0.1); }
-  50% { box-shadow: 0 0 40px rgba(253, 224, 71, 0.2); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(253, 224, 71, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(253, 224, 71, 0.2);
+  }
 }
 
 @keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* ================================
@@ -474,12 +529,16 @@ body {
 }
 
 @media (max-width: 992px) {
-  .grid-2, .grid-3 {
+
+  .grid-2,
+  .grid-3 {
     grid-template-columns: 1fr;
   }
+
   .section {
     padding: 5rem 2rem;
   }
+
   .navbar {
     display: none;
   }
@@ -489,13 +548,16 @@ body {
   .grid-4 {
     grid-template-columns: 1fr;
   }
+
   .section {
     padding: 4rem 1.5rem;
   }
+
   .title-large {
     font-size: clamp(2.5rem, 8vw, 4rem);
     letter-spacing: -1.5px;
   }
+
   .title-section {
     font-size: clamp(2rem, 5vw, 3rem);
   }

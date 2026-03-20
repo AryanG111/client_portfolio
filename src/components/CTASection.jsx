@@ -155,7 +155,7 @@ const CTASection = () => {
           style={{ marginTop: '5rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)' }}
         >
           <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-            © 2025 Swapnil Haramkar — Digital Marketing Strategist & Content Creator
+            © 2026 Swapnil Haramkar — Digital Marketing Strategist & Content Creator
           </p>
         </motion.div>
       </div>

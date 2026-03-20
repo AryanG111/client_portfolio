@@ -39,20 +39,6 @@ const Hero = () => {
         overflow: 'hidden',
       }}
     >
-      {/* Background gradient orbs */}
-      <div style={{
-        position: 'absolute', top: '-20%', right: '-10%',
-        width: '600px', height: '600px',
-        background: 'radial-gradient(circle, rgba(253, 224, 71, 0.06) 0%, transparent 70%)',
-        borderRadius: '50%', pointerEvents: 'none'
-      }} />
-      <div style={{
-        position: 'absolute', bottom: '-20%', left: '-10%',
-        width: '500px', height: '500px',
-        background: 'radial-gradient(circle, rgba(244, 114, 182, 0.05) 0%, transparent 70%)',
-        borderRadius: '50%', pointerEvents: 'none'
-      }} />
-
       {/* Label */}
       <motion.div
         initial={{ y: 30, opacity: 0 }}
