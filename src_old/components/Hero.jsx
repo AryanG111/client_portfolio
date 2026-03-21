@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Sparkles, TrendingUp, Eye } from 'lucide-react';
-import profileImg from '../../assests/WhatsApp_Image_2026-03-19_at_18.32.16-removebg-preview.png';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -40,70 +39,19 @@ const Hero = () => {
         overflow: 'hidden',
       }}
     >
-      {/* Profile Image - Redesigned for Premium Look */}
-      <motion.div
-        initial={{ y: 30, opacity: 0, scale: 0.9 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        style={{ y: yText, opacity: opacityFade, marginBottom: '2.5rem', position: 'relative' }}
-      >
-        <div style={{ position: 'relative', width: '200px', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
-          
-          {/* Animated Ambient Blob Base */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              rotate: [0, 90, 0]
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            style={{
-              position: 'absolute',
-              width: '130px',
-              height: '130px',
-              background: 'var(--accent-gradient)',
-              borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
-              filter: 'blur(30px)',
-              opacity: 0.45,
-              top: '50%',
-              left: '50%',
-              x: '-50%',
-              y: '-50%',
-              zIndex: 0
-            }} 
-          />
-
-          {/* Glass Pedestal */}
-          <div style={{
-            position: 'absolute',
-            bottom: '10px',
-            width: '160px',
-            height: '160px',
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.0) 100%)',
-            borderTop: '1px solid rgba(255,255,255,0.15)',
-            borderRight: '1px solid rgba(255,255,255,0.05)',
-            borderLeft: '1px solid rgba(255,255,255,0.05)',
-            borderRadius: '50%',
-            backdropFilter: 'blur(10px)',
-            zIndex: 1,
-            boxShadow: 'inset 0 0 20px rgba(255,255,255,0.02), 0 20px 40px rgba(0,0,0,0.5)'
-          }} />
-
-          {/* Clean Transparent Image Popping Out */}
-          <img 
-            src={profileImg} 
-            alt="Swapnil Haramkar" 
-            style={{ 
-              position: 'relative',
-              zIndex: 2,
-              width: '190px', 
-              height: '190px', 
-              objectFit: 'contain',
-              filter: 'drop-shadow(0 15px 25px rgba(0,0,0,0.5))',
-              transform: 'translateY(-15px)' // Pops out of the pedestal
-            }} 
-          />
-        </div>
-      </motion.div>
+      {/* Background gradient orbs */}
+      <div style={{
+        position: 'absolute', top: '-20%', right: '-10%',
+        width: '600px', height: '600px',
+        background: 'radial-gradient(circle, rgba(253, 224, 71, 0.06) 0%, transparent 70%)',
+        borderRadius: '50%', pointerEvents: 'none'
+      }} />
+      <div style={{
+        position: 'absolute', bottom: '-20%', left: '-10%',
+        width: '500px', height: '500px',
+        background: 'radial-gradient(circle, rgba(244, 114, 182, 0.05) 0%, transparent 70%)',
+        borderRadius: '50%', pointerEvents: 'none'
+      }} />
 
       {/* Label */}
       <motion.div
@@ -125,15 +73,15 @@ const Hero = () => {
         style={{ textAlign: 'center', maxWidth: '900px', y: yText, opacity: opacityFade }}
       >
         <h1 style={{
-          fontSize: 'clamp(2rem, 5.5vw, 4.2rem)',
+          fontSize: 'clamp(2.2rem, 6vw, 4.5rem)',
           fontWeight: 800,
-          lineHeight: 1.15,
+          lineHeight: 1.1,
           letterSpacing: '-2px',
           marginBottom: '1.5rem',
         }}>
-          Hello I'm Swapnil Haramkar.<br/>
           I help brands grow with{' '}
-          <span className="gradient-text">high-performing content</span>
+          <span className="gradient-text">high-performing content</span>{' '}
+          & data-driven strategy
         </h1>
         <p style={{
           fontSize: 'clamp(1rem, 2vw, 1.2rem)',
@@ -167,8 +115,8 @@ const Hero = () => {
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="hero-stats-row"
         style={{
+          display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center',
           y: yBadge, opacity: opacityFade
         }}
       >
@@ -177,12 +125,11 @@ const Hero = () => {
             key={stat.label}
             whileHover={{ y: -4, scale: 1.03 }}
             transition={{ duration: 0.2 }}
-            className="glass-card stat-card"
+            className="glass-card"
             style={{
               padding: '1.2rem 2rem',
               display: 'flex', alignItems: 'center', gap: '1rem',
               borderRadius: 'var(--radius-xl)',
-              minWidth: '240px'
             }}
           >
             <div style={{

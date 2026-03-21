@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, BarChart3, Medal } from 'lucide-react';
-import profileImg2 from '../../assests/WhatsApp_Image_2026-03-19_at_18.32.16__1_-removebg-preview.png';
 
 const highlights = [
   { icon: <Target size={20} />, text: 'Social media strategy & growth' },
@@ -47,57 +46,9 @@ const AboutMe = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-label" style={{ marginBottom: '1rem', display: 'block' }}>About Me</span>
-            <div style={{ marginBottom: '2rem' }}>
-              <div style={{ 
-                position: 'relative', 
-                width: '160px', 
-                height: '180px', 
-                marginBottom: '3rem',
-                marginTop: '1rem' 
-              }}>
-                {/* Decorative Accent Background */}
-                <div style={{
-                  position: 'absolute',
-                  inset: '20px 10px 0',
-                  background: 'var(--accent-yellow-dim)',
-                  borderRadius: 'var(--radius-xl)',
-                  transform: 'rotate(-8deg)',
-                  zIndex: 0,
-                  border: '1px solid rgba(253, 224, 71, 0.2)'
-                }} />
-                
-                {/* Glass Base Card */}
-                <div style={{
-                  position: 'absolute',
-                  inset: '15px 5px 0',
-                  background: 'var(--glass-bg)',
-                  backdropFilter: 'blur(12px)',
-                  border: '1px solid var(--glass-border)',
-                  borderRadius: 'var(--radius-xl)',
-                  zIndex: 1,
-                  boxShadow: '0 15px 30px rgba(0,0,0,0.4)'
-                }} />
-                
-                {/* Image Popping Out of the Base */}
-                <img 
-                  src={profileImg2} 
-                  alt="Swapnil Haramkar Profile" 
-                  style={{ 
-                    position: 'absolute',
-                    bottom: 0,
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: '150px', 
-                    height: 'auto',
-                    zIndex: 2,
-                    filter: 'drop-shadow(0 10px 15px rgba(0,0,0,0.5))'
-                  }} 
-                />
-              </div>
-              <h2 className="title-section">
-                I turn <span className="gradient-text">social media attention</span> into real business results
-              </h2>
-            </div>
+            <h2 className="title-section" style={{ marginBottom: '2rem' }}>
+              I turn <span className="gradient-text">social media attention</span> into real business results
+            </h2>
           </motion.div>
 
           <motion.div
